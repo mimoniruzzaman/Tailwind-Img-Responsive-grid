@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.hero-section {
+  background-image: url("./images/image.png");
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+}
+@layer components {
+  .hero-section {
+    @apply h-[90vh] before:h-full before:w-full  before:absolute before:bg-gradient-to-r before:from-indigo-500 from-10% before:via-sky-500 via-30% before:to-emerald-500 to-90%   before:opacity-25 grid place-content-center;
+  }
+  .hero-content {
+    @apply container mx-auto z-10 relative max-w-[400px] md:max-w-[600px] lg:max-w-[700px] md:bg-amber-600 lg:bg-neutral-600 bg-slate-500 text-white p-6;
+  }
+  .service {
+    @apply lg:max-w-[80%] lg:mx-auto md:max-w-[80%] md:mx-auto max-w-[80%] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10;
+  }
+  .service-content {
+    @apply text-center font-semibold text-5xl py-20 underline;
+  }
+  .gallary {
+    @apply w-[400px] border-[1px] border-slate-500 p-5 rounded-2xl;
+  }
+  .gallary h2 {
+    @apply text-2xl py-2;
+  }
+  .service-btn {
+    @apply py-2 px-4 mt-2 bg-yellow-500 text-cyan-800 inline-block rounded;
+  }
+}
